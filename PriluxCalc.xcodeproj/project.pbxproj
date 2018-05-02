@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB108DA0204B05050056AF24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB108D9F204B05050056AF24 /* AppDelegate.swift */; };
+		AB108DA2204B05050056AF24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB108DA1204B05050056AF24 /* ViewController.swift */; };
+		AB108DA5204B05050056AF24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB108DA3204B05050056AF24 /* Main.storyboard */; };
+		AB108DA7204B05050056AF24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB108DA6204B05050056AF24 /* Assets.xcassets */; };
+		AB108DAA204B05050056AF24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB108DA8204B05050056AF24 /* LaunchScreen.storyboard */; };
+		AB108DB2204B08E60056AF24 /* ProtocolosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB108DB1204B08E60056AF24 /* ProtocolosCollectionViewController.swift */; };
+		AB108DB4204B09210056AF24 /* CeldasProtocoloCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB108DB3204B09210056AF24 /* CeldasProtocoloCollectionViewCell.swift */; };
+		AB108DB6204B0E950056AF24 /* Protocolo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB108DB5204B0E950056AF24 /* Protocolo.swift */; };
+		AB108DB8204B25D50056AF24 /* CalcularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB108DB7204B25D50056AF24 /* CalcularViewController.swift */; };
+		AB108DBA204B27360056AF24 /* ResultadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB108DB9204B27360056AF24 /* ResultadoViewController.swift */; };
+		AB37D9EE209A1BEE002FCD20 /* Luminaria.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB37D9ED209A1BEE002FCD20 /* Luminaria.swift */; };
+		AB37D9F5209A1E4E002FCD20 /* LuminariaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB37D9F4209A1E4E002FCD20 /* LuminariaCollectionViewController.swift */; };
+		AB37D9F7209A1E72002FCD20 /* LuminariaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB37D9F6209A1E72002FCD20 /* LuminariaCollectionViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AB108D9C204B05050056AF24 /* PriluxCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PriluxCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB108D9F204B05050056AF24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AB108DA1204B05050056AF24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB108DA4204B05050056AF24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB108DA6204B05050056AF24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB108DA9204B05050056AF24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AB108DAB204B05050056AF24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB108DB1204B08E60056AF24 /* ProtocolosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolosCollectionViewController.swift; sourceTree = "<group>"; };
+		AB108DB3204B09210056AF24 /* CeldasProtocoloCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldasProtocoloCollectionViewCell.swift; sourceTree = "<group>"; };
+		AB108DB5204B0E950056AF24 /* Protocolo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocolo.swift; sourceTree = "<group>"; };
+		AB108DB7204B25D50056AF24 /* CalcularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcularViewController.swift; sourceTree = "<group>"; };
+		AB108DB9204B27360056AF24 /* ResultadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadoViewController.swift; sourceTree = "<group>"; };
+		AB37D9ED209A1BEE002FCD20 /* Luminaria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Luminaria.swift; sourceTree = "<group>"; };
+		AB37D9F4209A1E4E002FCD20 /* LuminariaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuminariaCollectionViewController.swift; sourceTree = "<group>"; };
+		AB37D9F6209A1E72002FCD20 /* LuminariaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuminariaCollectionViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB108D99204B05050056AF24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB108D93204B05050056AF24 = {
+			isa = PBXGroup;
+			children = (
+				AB108D9E204B05050056AF24 /* PriluxCalc */,
+				AB108D9D204B05050056AF24 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB108D9D204B05050056AF24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB108D9C204B05050056AF24 /* PriluxCalc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB108D9E204B05050056AF24 /* PriluxCalc */ = {
+			isa = PBXGroup;
+			children = (
+				AB37D9EF209A1C9C002FCD20 /* Luminaria */,
+				AB37D9F0209A1CAD002FCD20 /* Normativa */,
+				AB37D9F2209A1DBF002FCD20 /* Calculos */,
+				AB37D9F3209A1E0C002FCD20 /* Resultado */,
+				AB108D9F204B05050056AF24 /* AppDelegate.swift */,
+				AB108DA1204B05050056AF24 /* ViewController.swift */,
+				AB108DA3204B05050056AF24 /* Main.storyboard */,
+				AB108DA6204B05050056AF24 /* Assets.xcassets */,
+				AB108DA8204B05050056AF24 /* LaunchScreen.storyboard */,
+				AB108DAB204B05050056AF24 /* Info.plist */,
+			);
+			path = PriluxCalc;
+			sourceTree = "<group>";
+		};
+		AB37D9EF209A1C9C002FCD20 /* Luminaria */ = {
+			isa = PBXGroup;
+			children = (
+				AB37D9ED209A1BEE002FCD20 /* Luminaria.swift */,
+				AB37D9F4209A1E4E002FCD20 /* LuminariaCollectionViewController.swift */,
+				AB37D9F6209A1E72002FCD20 /* LuminariaCollectionViewCell.swift */,
+			);
+			path = Luminaria;
+			sourceTree = "<group>";
+		};
+		AB37D9F0209A1CAD002FCD20 /* Normativa */ = {
+			isa = PBXGroup;
+			children = (
+				AB108DB5204B0E950056AF24 /* Protocolo.swift */,
+				AB108DB1204B08E60056AF24 /* ProtocolosCollectionViewController.swift */,
+				AB108DB3204B09210056AF24 /* CeldasProtocoloCollectionViewCell.swift */,
+			);
+			path = Normativa;
+			sourceTree = "<group>";
+		};
+		AB37D9F2209A1DBF002FCD20 /* Calculos */ = {
+			isa = PBXGroup;
+			children = (
+				AB108DB7204B25D50056AF24 /* CalcularViewController.swift */,
+			);
+			path = Calculos;
+			sourceTree = "<group>";
+		};
+		AB37D9F3209A1E0C002FCD20 /* Resultado */ = {
+			isa = PBXGroup;
+			children = (
+				AB108DB9204B27360056AF24 /* ResultadoViewController.swift */,
+			);
+			path = Resultado;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB108D9B204B05050056AF24 /* PriluxCalc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB108DAE204B05050056AF24 /* Build configuration list for PBXNativeTarget "PriluxCalc" */;
+			buildPhases = (
+				AB108D98204B05050056AF24 /* Sources */,
+				AB108D99204B05050056AF24 /* Frameworks */,
+				AB108D9A204B05050056AF24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PriluxCalc;
+			productName = PriluxCalc;
+			productReference = AB108D9C204B05050056AF24 /* PriluxCalc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB108D94204B05050056AF24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "David Gomez";
+				TargetAttributes = {
+					AB108D9B204B05050056AF24 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AB108D97204B05050056AF24 /* Build configuration list for PBXProject "PriluxCalc" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB108D93204B05050056AF24;
+			productRefGroup = AB108D9D204B05050056AF24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB108D9B204B05050056AF24 /* PriluxCalc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB108D9A204B05050056AF24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB108DAA204B05050056AF24 /* LaunchScreen.storyboard in Resources */,
+				AB108DA7204B05050056AF24 /* Assets.xcassets in Resources */,
+				AB108DA5204B05050056AF24 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB108D98204B05050056AF24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB108DA2204B05050056AF24 /* ViewController.swift in Sources */,
+				AB108DA0204B05050056AF24 /* AppDelegate.swift in Sources */,
+				AB108DBA204B27360056AF24 /* ResultadoViewController.swift in Sources */,
+				AB108DB4204B09210056AF24 /* CeldasProtocoloCollectionViewCell.swift in Sources */,
+				AB37D9EE209A1BEE002FCD20 /* Luminaria.swift in Sources */,
+				AB108DB8204B25D50056AF24 /* CalcularViewController.swift in Sources */,
+				AB108DB6204B0E950056AF24 /* Protocolo.swift in Sources */,
+				AB37D9F7209A1E72002FCD20 /* LuminariaCollectionViewCell.swift in Sources */,
+				AB108DB2204B08E60056AF24 /* ProtocolosCollectionViewController.swift in Sources */,
+				AB37D9F5209A1E4E002FCD20 /* LuminariaCollectionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AB108DA3204B05050056AF24 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB108DA4204B05050056AF24 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AB108DA8204B05050056AF24 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB108DA9204B05050056AF24 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB108DAC204B05050056AF24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB108DAD204B05050056AF24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB108DAF204B05050056AF24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6YDR59UHKP;
+				INFOPLIST_FILE = PriluxCalc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = prilux.com.PriluxCalc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB108DB0204B05050056AF24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6YDR59UHKP;
+				INFOPLIST_FILE = PriluxCalc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = prilux.com.PriluxCalc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB108D97204B05050056AF24 /* Build configuration list for PBXProject "PriluxCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB108DAC204B05050056AF24 /* Debug */,
+				AB108DAD204B05050056AF24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB108DAE204B05050056AF24 /* Build configuration list for PBXNativeTarget "PriluxCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB108DAF204B05050056AF24 /* Debug */,
+				AB108DB0204B05050056AF24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB108D94204B05050056AF24 /* Project object */;
+}
