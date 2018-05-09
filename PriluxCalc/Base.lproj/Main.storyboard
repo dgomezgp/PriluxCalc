@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Luminaria Collection View Controller-->
+        <!--Luminarias-->
         <scene sceneID="4ts-Dg-62d">
             <objects>
                 <collectionViewController id="tl4-Y5-XNB" customClass="LuminariaCollectionViewController" customModule="PriluxCalc" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,7 +86,7 @@
                             <outlet property="delegate" destination="tl4-Y5-XNB" id="qnj-Ey-Km7"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="85E-vl-FP0"/>
+                    <navigationItem key="navigationItem" title="Luminarias" id="85E-vl-FP0"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7o8-Mu-bPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,8 +114,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="light-bulb" translatesAutoresizingMaskIntoConstraints="NO" id="KiB-Q8-xYF">
-                                            <rect key="frame" x="13" y="20" width="142" height="135"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="light-bulb" translatesAutoresizingMaskIntoConstraints="NO" id="KiB-Q8-xYF">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlY-iJ-NUT">
                                             <rect key="frame" x="0.0" y="8" width="150" height="20.5"/>
@@ -141,15 +141,15 @@
                                 <constraints>
                                     <constraint firstItem="KiB-Q8-xYF" firstAttribute="centerY" secondItem="9Ux-bk-swH" secondAttribute="centerY" id="19U-bg-jDL"/>
                                     <constraint firstItem="x86-Ax-hbf" firstAttribute="top" secondItem="GlY-iJ-NUT" secondAttribute="bottom" constant="67" id="3pg-i2-vo9"/>
-                                    <constraint firstItem="GlY-iJ-NUT" firstAttribute="top" secondItem="KiB-Q8-xYF" secondAttribute="top" id="MSc-UO-b1N"/>
+                                    <constraint firstItem="GlY-iJ-NUT" firstAttribute="top" secondItem="KiB-Q8-xYF" secondAttribute="top" constant="8" id="MSc-UO-b1N"/>
                                     <constraint firstItem="x86-Ax-hbf" firstAttribute="trailing" secondItem="frA-HH-LRj" secondAttribute="trailing" id="NWl-TH-TbN"/>
                                     <constraint firstItem="GlY-iJ-NUT" firstAttribute="leading" secondItem="9Ux-bk-swH" secondAttribute="leading" id="R6t-B6-A7v"/>
                                     <constraint firstAttribute="trailing" secondItem="GlY-iJ-NUT" secondAttribute="trailing" id="Sau-8W-B4w"/>
                                     <constraint firstItem="x86-Ax-hbf" firstAttribute="leading" secondItem="frA-HH-LRj" secondAttribute="leading" id="Y7B-JV-oxK"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="KiB-Q8-xYF" secondAttribute="trailing" constant="4" id="bOc-At-dgX"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="KiB-Q8-xYF" secondAttribute="trailing" constant="-8" id="bOc-At-dgX"/>
                                     <constraint firstItem="frA-HH-LRj" firstAttribute="top" secondItem="x86-Ax-hbf" secondAttribute="bottom" constant="5" id="dC8-Rh-J4X"/>
-                                    <constraint firstItem="KiB-Q8-xYF" firstAttribute="leading" secondItem="9Ux-bk-swH" secondAttribute="leadingMargin" constant="-3" id="hw5-Gk-jIZ"/>
-                                    <constraint firstItem="frA-HH-LRj" firstAttribute="bottom" secondItem="KiB-Q8-xYF" secondAttribute="bottom" id="kgF-VU-jQD"/>
+                                    <constraint firstItem="KiB-Q8-xYF" firstAttribute="leading" secondItem="9Ux-bk-swH" secondAttribute="leadingMargin" constant="-8" id="hw5-Gk-jIZ"/>
+                                    <constraint firstItem="frA-HH-LRj" firstAttribute="bottom" secondItem="KiB-Q8-xYF" secondAttribute="bottom" constant="-8" id="kgF-VU-jQD"/>
                                     <constraint firstItem="GlY-iJ-NUT" firstAttribute="trailing" secondItem="x86-Ax-hbf" secondAttribute="trailing" id="kvK-wg-OjD"/>
                                     <constraint firstItem="GlY-iJ-NUT" firstAttribute="leading" secondItem="x86-Ax-hbf" secondAttribute="leading" id="mNC-nj-6Fs"/>
                                 </constraints>
@@ -171,7 +171,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCi-jw-wTC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1261.5999999999999" y="116.49175412293854"/>
+            <point key="canvasLocation" x="1260" y="116.19718309859155"/>
         </scene>
         <!--Calcular View Controller-->
         <scene sceneID="sJe-z5-Dsd">

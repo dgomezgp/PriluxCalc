@@ -26,6 +26,7 @@ class ProtocolosCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
         collectionView?.delegate = self
+        title = "Normativa"
     }
 
     override func didReceiveMemoryWarning() {

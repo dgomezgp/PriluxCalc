@@ -28,7 +28,8 @@ class ResultadoViewController: UIViewController {
         resultadoLuxesLabel.text = String(luxesARecibir!)
         resultadoLuminariasLabel.text = String(luminariasARecibir!)
         
-
+        title = "Resultado"
+        
         // Do any additional setup after loading the view.
     }
 

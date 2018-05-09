@@ -71,6 +71,8 @@ class CalcularViewController: UIViewController {
         distanciaSueloTextfield.text = String(describing: (protocoloARecibir?.distanciaSuelo)!)
         
        apertura = luminariaARecibir?.apertura
+        
+        title = "Parametros"
 
         
 
