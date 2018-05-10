@@ -29,6 +29,9 @@ class LuminariaCollectionViewController: UICollectionViewController {
         
         collectionView?.delegate = self
         
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fondo-azul-2x")!)
+        
+        collectionView?.backgroundColor = UIColor(patternImage: UIImage(named: "fondo-azul-2x")!)
         
         //JSON
         if let url = URL (string: urlAPIString) {
@@ -216,9 +219,14 @@ class LuminariaCollectionViewController: UICollectionViewController {
         
         if segue.identifier == "normativaSegue" {
             if indexPathCollection != -1 {
-                let luminariaAEnviar = luminaria[indexPathCollection]
+                let luminariaSeleccionada = luminariasDic[indexPathCollection]
+                let lumenesConver = luminariaSeleccionada["LUMENES"]!
+                let aperturaConver = luminariaSeleccionada["APERTURA"]!
+                let nombreConver = luminariaSeleccionada["NOMBRE"]!
+                let luminariaAEnviar = Luminaria(nombre: nombreConver, lumenes: Double(lumenesConver)!, apertura: Double(aperturaConver)!)
                 let destinationController = segue.destination as! ProtocolosCollectionViewController
-                destinationController.luminariaARecibir = luminariaAEnviar
+               destinationController.luminariaARecibir = luminariaAEnviar
+                print("*****************************************")
             }
             
             
