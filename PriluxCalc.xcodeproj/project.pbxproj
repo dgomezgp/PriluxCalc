@@ -17,6 +17,7 @@
 		AB108DB6204B0E950056AF24 /* Protocolo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB108DB5204B0E950056AF24 /* Protocolo.swift */; };
 		AB108DB8204B25D50056AF24 /* CalcularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB108DB7204B25D50056AF24 /* CalcularViewController.swift */; };
 		AB108DBA204B27360056AF24 /* ResultadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB108DB9204B27360056AF24 /* ResultadoViewController.swift */; };
+		AB12760C20A326EE0013A1F1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12760B20A326EE0013A1F1 /* SwiftyJSON.swift */; };
 		AB37D9EE209A1BEE002FCD20 /* Luminaria.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB37D9ED209A1BEE002FCD20 /* Luminaria.swift */; };
 		AB37D9F5209A1E4E002FCD20 /* LuminariaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB37D9F4209A1E4E002FCD20 /* LuminariaCollectionViewController.swift */; };
 		AB37D9F7209A1E72002FCD20 /* LuminariaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB37D9F6209A1E72002FCD20 /* LuminariaCollectionViewCell.swift */; };
@@ -35,6 +36,7 @@
 		AB108DB5204B0E950056AF24 /* Protocolo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocolo.swift; sourceTree = "<group>"; };
 		AB108DB7204B25D50056AF24 /* CalcularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcularViewController.swift; sourceTree = "<group>"; };
 		AB108DB9204B27360056AF24 /* ResultadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadoViewController.swift; sourceTree = "<group>"; };
+		AB12760B20A326EE0013A1F1 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		AB37D9ED209A1BEE002FCD20 /* Luminaria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Luminaria.swift; sourceTree = "<group>"; };
 		AB37D9F4209A1E4E002FCD20 /* LuminariaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuminariaCollectionViewController.swift; sourceTree = "<group>"; };
 		AB37D9F6209A1E72002FCD20 /* LuminariaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuminariaCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		AB108D9E204B05050056AF24 /* PriluxCalc */ = {
 			isa = PBXGroup;
 			children = (
+				AB12760D20A326F70013A1F1 /* Librerias_Externas */,
 				AB37D9EF209A1C9C002FCD20 /* Luminaria */,
 				AB37D9F0209A1CAD002FCD20 /* Normativa */,
 				AB37D9F2209A1DBF002FCD20 /* Calculos */,
@@ -82,6 +85,14 @@
 				AB108DAB204B05050056AF24 /* Info.plist */,
 			);
 			path = PriluxCalc;
+			sourceTree = "<group>";
+		};
+		AB12760D20A326F70013A1F1 /* Librerias_Externas */ = {
+			isa = PBXGroup;
+			children = (
+				AB12760B20A326EE0013A1F1 /* SwiftyJSON.swift */,
+			);
+			path = Librerias_Externas;
 			sourceTree = "<group>";
 		};
 		AB37D9EF209A1C9C002FCD20 /* Luminaria */ = {
@@ -195,6 +206,7 @@
 				AB108DA2204B05050056AF24 /* ViewController.swift in Sources */,
 				AB108DA0204B05050056AF24 /* AppDelegate.swift in Sources */,
 				AB108DBA204B27360056AF24 /* ResultadoViewController.swift in Sources */,
+				AB12760C20A326EE0013A1F1 /* SwiftyJSON.swift in Sources */,
 				AB108DB4204B09210056AF24 /* CeldasProtocoloCollectionViewCell.swift in Sources */,
 				AB37D9EE209A1BEE002FCD20 /* Luminaria.swift in Sources */,
 				AB108DB8204B25D50056AF24 /* CalcularViewController.swift in Sources */,
