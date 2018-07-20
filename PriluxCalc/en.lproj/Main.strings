@@ -1,0 +1,171 @@
+
+/* Class = "UILabel"; text = "Altura"; ObjectID = "0l9-3I-oNY"; */
+"0l9-3I-oNY.text" = "Altura";
+
+/* Class = "UILabel"; text = "Altura"; ObjectID = "0pP-kt-uhp"; */
+"0pP-kt-uhp.text" = "Altura";
+
+/* Class = "UILabel"; text = "Nombre"; ObjectID = "2BX-N7-s0D"; */
+"2BX-N7-s0D.text" = "Nombre";
+
+/* Class = "UIButton"; normalTitle = "Calcular"; ObjectID = "2LM-Jy-KCP"; */
+"2LM-Jy-KCP.normalTitle" = "Calcular";
+
+/* Class = "UILabel"; text = "Longitud"; ObjectID = "2V5-tW-SVO"; */
+"2V5-tW-SVO.text" = "Longitud";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "4Kf-Ly-tZs"; */
+"4Kf-Ly-tZs.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "Luminarias"; ObjectID = "85E-vl-FP0"; */
+"85E-vl-FP0.title" = "Luminarias";
+
+/* Class = "UIButton"; normalTitle = "Puntos de Luz"; ObjectID = "9C2-Ub-0Zh"; */
+"9C2-Ub-0Zh.normalTitle" = "Puntos de Luz";
+
+/* Class = "UINavigationItem"; title = "Resultado"; ObjectID = "Bbs-OP-13a"; */
+"Bbs-OP-13a.title" = "Resultado";
+
+/* Class = "UILabel"; text = "Anchura"; ObjectID = "Bpk-Vm-Uwx"; */
+"Bpk-Vm-Uwx.text" = "Anchura";
+
+/* Class = "UIButton"; normalTitle = "Recalcular"; ObjectID = "DYc-7E-rr6"; */
+"DYc-7E-rr6.normalTitle" = "Recalcular";
+
+/* Class = "UILabel"; text = "Luxes en Suelo:"; ObjectID = "EI6-oB-6qb"; */
+"EI6-oB-6qb.text" = "Luxes en Suelo:";
+
+/* Class = "UILabel"; text = "Nombre"; ObjectID = "GlY-iJ-NUT"; */
+"GlY-iJ-NUT.text" = "Nombre";
+
+/* Class = "UILabel"; text = "ResultadoLuminariasNecesarias"; ObjectID = "H7q-pu-lmg"; */
+"H7q-pu-lmg.text" = "ResultadoLuminariasNecesarias";
+
+/* Class = "UINavigationItem"; title = "Normativa"; ObjectID = "HOh-9M-ZTX"; */
+"HOh-9M-ZTX.title" = "Normativa";
+
+/* Class = "UILabel"; text = "Longitud"; ObjectID = "Iak-GG-ddz"; */
+"Iak-GG-ddz.text" = "Longitud";
+
+/* Class = "UINavigationItem"; title = "Eleccion"; ObjectID = "Jpq-m9-A4C"; */
+"Jpq-m9-A4C.title" = "Eleccion";
+
+/* Class = "UILabel"; text = "Anchura"; ObjectID = "KXc-vg-vf6"; */
+"KXc-vg-vf6.text" = "Anchura";
+
+/* Class = "UILabel"; text = "Distancia al suelo"; ObjectID = "LpF-Iv-ujR"; */
+"LpF-Iv-ujR.text" = "Distancia al suelo";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "MLF-cr-5ct"; */
+"MLF-cr-5ct.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "Resultado"; ObjectID = "MSr-my-smu"; */
+"MSr-my-smu.title" = "Resultado";
+
+/* Class = "UILabel"; text = "Luminarias necesarias:"; ObjectID = "Nvz-4Y-45S"; */
+"Nvz-4Y-45S.text" = "Luminarias necesarias:";
+
+/* Class = "UILabel"; text = "Luminarias necesarias:"; ObjectID = "Osy-oO-Tbw"; */
+"Osy-oO-Tbw.text" = "Luminarias necesarias:";
+
+/* Class = "UILabel"; text = "ResultadoLuxSuelo"; ObjectID = "PJl-6F-jet"; */
+"PJl-6F-jet.text" = "ResultadoLuxSuelo";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "PN8-oo-oSZ"; */
+"PN8-oo-oSZ.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "Recalcular"; ObjectID = "R0d-Tb-MhS"; */
+"R0d-Tb-MhS.normalTitle" = "Recalcular";
+
+/* Class = "UILabel"; text = "Puntos de Luz"; ObjectID = "RQ5-5M-XmD"; */
+"RQ5-5M-XmD.text" = "Puntos de Luz";
+
+/* Class = "UILabel"; text = "ResultadoLuminariasNecesarias"; ObjectID = "SLt-eE-y3l"; */
+"SLt-eE-y3l.text" = "ResultadoLuminariasNecesarias";
+
+/* Class = "UILabel"; text = "¿Que deseas calcular?"; ObjectID = "ST0-uc-yY9"; */
+"ST0-uc-yY9.text" = "¿Que deseas calcular?";
+
+/* Class = "UISearchBar"; placeholder = "Buscar Lumiraria"; ObjectID = "Tio-nk-8t3"; */
+"Tio-nk-8t3.placeholder" = "Buscar Lumiraria";
+
+/* Class = "UISearchBar"; Tio-nk-8t3.scopeButtonTitles[0] = "Title"; ObjectID = "Tio-nk-8t3"; */
+"Tio-nk-8t3.scopeButtonTitles[0]" = "Title";
+
+/* Class = "UISearchBar"; Tio-nk-8t3.scopeButtonTitles[1] = "Title"; ObjectID = "Tio-nk-8t3"; */
+"Tio-nk-8t3.scopeButtonTitles[1]" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Calcular"; ObjectID = "Uo0-Lo-pvO"; */
+"Uo0-Lo-pvO.normalTitle" = "Calcular";
+
+/* Class = "UILabel"; text = "Distancia al suelo"; ObjectID = "VoK-bF-1Nf"; */
+"VoK-bF-1Nf.text" = "Distancia al suelo";
+
+/* Class = "UILabel"; text = "Distancia al suelo"; ObjectID = "Whk-al-Y39"; */
+"Whk-al-Y39.text" = "Distancia al suelo";
+
+/* Class = "UILabel"; text = "Apertura"; ObjectID = "YK4-Fe-htk"; */
+"YK4-Fe-htk.text" = "Apertura";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "ZWR-az-Tjf"; */
+"ZWR-az-Tjf.title" = "Item";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "aAH-Dl-UjN"; */
+"aAH-Dl-UjN.title" = "Item";
+
+/* Class = "UILabel"; text = "Lumenes"; ObjectID = "aN3-5L-obI"; */
+"aN3-5L-obI.text" = "Lumenes";
+
+/* Class = "UINavigationItem"; title = "Calculos"; ObjectID = "aai-bx-3s1"; */
+"aai-bx-3s1.title" = "Calculos";
+
+/* Class = "UILabel"; text = "Luxes en Suelo:"; ObjectID = "cCC-0e-SE0"; */
+"cCC-0e-SE0.text" = "Luxes en Suelo:";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "dF3-cd-eQv"; */
+"dF3-cd-eQv.title" = "Item";
+
+/* Class = "UILabel"; text = "Luxes"; ObjectID = "frA-HH-LRj"; */
+"frA-HH-LRj.text" = "Luxes";
+
+/* Class = "UILabel"; text = "Puntos de Luz"; ObjectID = "gII-wg-g0x"; */
+"gII-wg-g0x.text" = "Puntos de Luz";
+
+/* Class = "UISearchBar"; placeholder = "Buscar Normativa"; ObjectID = "gLx-Xk-7M5"; */
+"gLx-Xk-7M5.placeholder" = "Buscar Normativa";
+
+/* Class = "UIButton"; normalTitle = "Calcular"; ObjectID = "h1H-SV-dJk"; */
+"h1H-SV-dJk.normalTitle" = "Calcular";
+
+/* Class = "UILabel"; text = "Anchura"; ObjectID = "i0X-SO-5zc"; */
+"i0X-SO-5zc.text" = "Anchura";
+
+/* Class = "UILabel"; text = "Longitud"; ObjectID = "k3u-aX-S2a"; */
+"k3u-aX-S2a.text" = "Longitud";
+
+/* Class = "UILabel"; text = "ResultadoLuxSuelo"; ObjectID = "knK-jZ-n9A"; */
+"knK-jZ-n9A.text" = "ResultadoLuxSuelo";
+
+/* Class = "UILabel"; text = "Lumenes"; ObjectID = "mKI-6Q-HmV"; */
+"mKI-6Q-HmV.text" = "Lumenes";
+
+/* Class = "UINavigationItem"; title = "Calculos"; ObjectID = "oLe-X8-A2E"; */
+"oLe-X8-A2E.title" = "Calculos";
+
+/* Class = "UILabel"; text = "Altura"; ObjectID = "pOL-as-8nj"; */
+"pOL-as-8nj.text" = "Altura";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "rEt-CQ-tz5"; */
+"rEt-CQ-tz5.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "Luxes"; ObjectID = "rwj-mX-ssI"; */
+"rwj-mX-ssI.normalTitle" = "Luxes";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "w2b-vQ-NGQ"; */
+"w2b-vQ-NGQ.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "Calculos"; ObjectID = "wcy-Rq-Edh"; */
+"wcy-Rq-Edh.title" = "Calculos";
+
+/* Class = "UILabel"; text = "Distancia"; ObjectID = "x86-Ax-hbf"; */
+"x86-Ax-hbf.text" = "Distancia";

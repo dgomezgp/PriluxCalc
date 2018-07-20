@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResultadoViewController: UIViewController {
+class ResultadoLuxesViewController: UIViewController {
     
     @IBOutlet weak var luxesLabel: UILabel!
     
@@ -82,8 +82,6 @@ class ResultadoViewController: UIViewController {
         }
         
     }
-    
-    
     
     
     override func didReceiveMemoryWarning() {
