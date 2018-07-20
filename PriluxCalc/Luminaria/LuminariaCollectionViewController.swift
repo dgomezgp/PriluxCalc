@@ -10,7 +10,9 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class LuminariaCollectionViewController: UICollectionViewController {
+class LuminariaCollectionViewController: UICollectionViewController,UISearchBarDelegate,UICollectionViewDelegateFlowLayout {
+
+    
     
     var luminaria:[Luminaria] = [Luminaria(nombre: "Bura", lumenes: 100, apertura: 120),
                                   Luminaria(nombre: "Nigra", lumenes: 200, apertura: 120),
@@ -19,18 +21,54 @@ class LuminariaCollectionViewController: UICollectionViewController {
                                   Luminaria(nombre: "Hexagon", lumenes: 500, apertura: 120),
                                   Luminaria(nombre: "Avatar", lumenes: 600, apertura: 120)]
     
+
+    let kCellHeight : CGFloat = 100
+    let kLineSpacing : CGFloat = 10
+    let kInset : CGFloat = 10
+    
     var indexPathCollection = 0
+    var searchBarActive : Bool = false
     //JSON
     var luminariasDic = [[String:String]]()
     var urlAPIString = "http:www.grupoprilux.com/priluxcalc/test.php"
+    
+
+    var searchLuminarias = [[String:String]]()
+ 
+    
+    
+    @IBAction func botonAyuda(_ sender: Any) {
+        
+        //Esto es para crear alertas
+        //Crear una alerta
+        //UIAlertController
+        
+        let alerta = UIAlertController(title: "Tutorial", message: "Elige el producto con el que quieras realizar el calculo", preferredStyle: UIAlertControllerStyle.alert)
+        //Creamos  Acciones (los botones)
+        let accionCancelar = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        alerta.addAction(accionCancelar)
+        present(alerta, animated: true) {
+            print("Alerta mostrada")
+        }
+        
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView?.delegate = self
+        title = "Luminarias"
+        
+        //Search Fijo?
+        let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout
+        layout?.sectionHeadersPinToVisibleBounds = true
+
         
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fondo-azul-2x")!)
         
+        //Poner fondo de pantalla
         collectionView?.backgroundColor = UIColor(patternImage: UIImage(named: "fondo-azul-2x")!)
         
         //JSON
@@ -60,6 +98,29 @@ class LuminariaCollectionViewController: UICollectionViewController {
                 
             }
         }
+        
+        
+        //Comprobar si hay internet
+        
+        let web : String? = "https://www.google.com"
+        ConnectionCheck.isInternetAvailable(webSiteToPing: web) { (b)  in
+            print(b)
+            if b {
+                print("HAY CONEXION!!!!") // or do something here
+            } else {
+                print("NO HAY CONEXION!!!") // or do something here
+                let alerta = UIAlertController(title: "Tutorial", message: "NO TIENES CONEXION A INTERNET", preferredStyle: UIAlertControllerStyle.alert)
+                //Creamos  Acciones (los botones)
+                let accionCancelar = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+                alerta.addAction(accionCancelar)
+                self.present(alerta, animated: true) {
+                    print("Alerta mostrada")
+                }
+            }
+        }
+
+
+ 
     }
     
     
@@ -78,7 +139,6 @@ class LuminariaCollectionViewController: UICollectionViewController {
      // Pass the selected object to the new view controller.
      }
      */
-    
     
     // MARK: TRATAMIENTO CON JSON
     
@@ -129,15 +189,23 @@ class LuminariaCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return luminariasDic.count
+
+        // Le decimo ssi esta en modo busqueda
+        if searchBarActive {
+            return searchLuminarias.count
+        } else {
+            return luminariasDic.count
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "celdaCollection", for: indexPath) as! LuminariaCollectionViewCell
         
+        let luminarias = (searchBarActive) ?  searchLuminarias : luminariasDic
+
         
         //Tratamiento de imagenes de producto
-        let imagenString = luminariasDic[indexPath.row]["FOTO"]!
+        let imagenString = luminarias[indexPath.row]["FOTO"]!
         if imagenString.isEmpty || imagenString == "" {
             cell.imagenContenedor.image = UIImage(named: "imagenNoDisponible")
             
@@ -160,19 +228,21 @@ class LuminariaCollectionViewController: UICollectionViewController {
         }
         
         //Customizarla
-        cell.nombreLuminariaLabel.text = luminariasDic[indexPath.row]["NOMBRE"]
-        cell.lumenesLabel.text = luminariasDic[indexPath.row]["LUMENES"]
-        cell.aperturaLabel.text = luminariasDic[indexPath.row]["APERTURA"]
+        cell.nombreLuminariaLabel.text = luminarias[indexPath.row]["NOMBRE"]
+        cell.lumenesLabel.text = luminarias[indexPath.row]["LUMENES"]
+        cell.aperturaLabel.text = luminarias[indexPath.row]["APERTURA"]
         //cell.imagenContenedor.image = UIImage(named: "light-bulb" )
         cell.imagenContenedor.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3).cgColor
         cell.imagenContenedor.layer.borderWidth = 2
-        cell.imagenContenedor.layer.cornerRadius = 3
-        cell.layer.cornerRadius = 7
+        cell.imagenContenedor.layer.cornerRadius = 15
+        cell.layer.cornerRadius = 15
         
         
         
         return cell
     }
+    
+    
     
     // MARK: UICollectionViewDelegate
     
@@ -194,6 +264,82 @@ class LuminariaCollectionViewController: UICollectionViewController {
         
     }
     
+     // MARK: - SearchBar
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if (kind == UICollectionElementKindSectionHeader) {
+            let headerView:UICollectionReusableView =  collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CollectionViewHeader", for: indexPath)
+            
+            
+            
+            return headerView
+        }
+        
+        return UICollectionReusableView()
+        
+    }
+    
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if(!(searchBar.text?.isEmpty)!){
+            //reload your data source if necessary
+            
+            //miramos si el hay texto accediendo al texto de la barra dentro del searchcontroller porque el search controller no contiene el texto
+            if let textoDeBusqueda = searchBar.text {
+                // LLamamos al metodo que hemos creado para hacer la busqueda pasandole la letras o cojunto de letras a buscar
+                filtrarContenido(para: textoDeBusqueda)
+                
+            }
+            // if text lenght == 0
+            // we will consider the searchbar is not active
+            searchBarActive = true
+            
+        }else {
+
+            searchBarActive = false
+
+        }
+        
+        self.collectionView?.reloadData()
+
+        
+    }
+    /*
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if(searchText.isEmpty){
+
+            searchBarActive = false
+            
+
+        }else {
+            
+            //miramos si el hay texto accediendo al texto de la barra dentro del searchcontroller porque el search controller no contiene el texto
+            if let textoDeBusqueda = searchBar.text {
+                // LLamamos al metodo que hemos creado para hacer la busqueda pasandole la letras o cojunto de letras a buscar
+                filtrarContenido(para: textoDeBusqueda)
+                
+            }
+            // if text lenght == 0
+            // we will consider the searchbar is not active
+            searchBarActive = true
+        }
+        
+        self.collectionView?.reloadData()
+    }
+    */
+    
+    
+    //Aqui filtramos las luminarias
+    func filtrarContenido ( para searchText: String) {
+        searchLuminarias = luminariasDic.filter({ (luminariasAFiltrar) -> Bool in
+            
+            // Esto es para madar un array en el cual se buscan varios resultados de busqueda
+            return [luminariasAFiltrar["NOMBRE"] ?? ""].contains(where: { (nombre) -> Bool in
+                nombre.localizedCaseInsensitiveContains(searchText)
+            })
+        })
+    }
     
     /*
      // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
@@ -210,7 +356,7 @@ class LuminariaCollectionViewController: UICollectionViewController {
      }
      */
     
-    // MARK: - Navigation
+   
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -228,13 +374,9 @@ class LuminariaCollectionViewController: UICollectionViewController {
                destinationController.luminariaARecibir = luminariaAEnviar
                 print("*****************************************")
             }
-            
-            
-            
         }
         
         
     }
-    
-    
+
 }

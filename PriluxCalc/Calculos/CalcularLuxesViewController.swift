@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CalcularViewController: UIViewController,UITextFieldDelegate {
+class CalcularLuxesViewController: UIViewController,UITextFieldDelegate {
     
-
- 
+    
+    
     var areaIluminanciaPorLuminaria : Double!
     
     var protocoloARecibir : Protocolo?
@@ -33,20 +33,20 @@ class CalcularViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var alturaLabel: UILabel!
     
     @IBOutlet weak var alturaTextfield: UITextField!
+
+    @IBOutlet weak var punLuzLabel: UILabel!
+    
+    
+    @IBOutlet weak var punLuzTextfield: UITextField!
     
     @IBOutlet weak var distanciaSueloLabel: UILabel!
     
     @IBOutlet weak var distanciaSueloTextfield: UITextField!
     
-    
-    @IBOutlet weak var lumenLabel: UILabel!
-    
-    
-    @IBOutlet weak var lumenTextfield: UITextField!
-    
     var luxes : Double?
-    var numeroLuminarias : Double?
     
+    var puntosLuz : Double?
+  
     var mantenimiento = 0.9
     
     
@@ -90,14 +90,11 @@ class CalcularViewController: UIViewController,UITextFieldDelegate {
         
         //comprobamos que los campos no esten vacios
         if(comprobarCamposVacios() == true) {
-           print ("HAY CAMPOS VACIOS")
+            print ("HAY CAMPOS VACIOS")
         } else {
-        // llamamos a la funcion de calculo
-         luxes = calcularLuxes() * Kfactor() * mantenimiento
-         numeroLuminarias = calcularNumeroLuminarias()
-        //print(luxes)
-        //print(numeroLuminarias)
-        //print(luminariaARecibir?.apertura)
+            // llamamos a la funcion de calculo
+            luxes = calcularLuxes() * Kfactor() * mantenimiento
+            print(luxes)
         }
     }
     
@@ -109,106 +106,60 @@ class CalcularViewController: UIViewController,UITextFieldDelegate {
         //print (protocoloARecibir?.luxes)
         //print (protocoloARecibir?.distanciaSuelo)
         
-        //delegados
+        //Delegados
         alturaTextfield.delegate = self
         anchuraTextField.delegate = self
         longitudTextfield.delegate = self
-        lumenTextfield.delegate = self
+        punLuzTextfield.delegate = self
         distanciaSueloTextfield.delegate = self
+
         
-        //Imprime en los textfield los valores traidos de los protocolos
-        lumenTextfield.text = convertirPuntoAComa(text: String(describing: (luminariaARecibir?.lumenes)!))
-        distanciaSueloTextfield.text = convertirPuntoAComa(text: String(describing: (protocoloARecibir?.distanciaSuelo)!))
         
-       apertura = luminariaARecibir?.apertura
+        apertura = luminariaARecibir?.apertura
         
         title = "Cálculos"
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "fondo-azul-2x")!)
-
+        
+        distanciaSueloTextfield.text = convertirPuntoAComa(text: String(describing: (protocoloARecibir?.distanciaSuelo)!))
         
         if (protocoloARecibir?.nombre != "LIBRE") {
-            
-            lumenLabel.isHidden = true
-            lumenTextfield.isHidden = true
+
             distanciaSueloLabel.isHidden = true
             distanciaSueloTextfield.isHidden = true
-        
+            
         }
-        
-        
-        
+       
 
-        // Do any additional setup after loading the view.
+        
     }
     
     
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   
     
     
     func calcularLuxes() -> Double {
-        
-        let grados = calcularGrados(apertura: apertura!)
-        let radianes = calcularRadianes(grados: grados)
-        let alturaPunto = convertirComa(text: alturaTextfield.text!)
-        let altura = Double(alturaPunto)!
-        let radio = calcularRadio(altura: altura, radinanes: radianes)
-        if ( areaCorregida == false) {
-            areaIluminanciaPorLuminaria = pow(radio, 2.0)
-        }
-        let lumenesComa = convertirComa(text: lumenTextfield.text!)
-        let lumenes = Double(lumenesComa)!
-        let resultadoSuelo = lumenes / areaIluminanciaPorLuminaria
-        return resultadoSuelo
-    }
-   
-    func calcularNumeroLuminarias() -> Double {
-        let anchoComa = convertirComa(text:  String(describing: anchuraTextField.text!))
-        let ancho = Double(anchoComa)
-        let largoComa = convertirComa(text:  String(describing: longitudTextfield.text!))
-        let largo = Double (largoComa)
-        
-        let resultado = (ancho! * largo!) / areaIluminanciaPorLuminaria
+     
+        puntosLuz = Double(punLuzTextfield.text!)!
+        let lumenesPunto = convertirComa(text: String(describing: (luminariaARecibir?.lumenes)!))
+        let lumenes = Double(lumenesPunto)
+        let anchoPunto = convertirComa(text: anchuraTextField.text!)
+        let ancho = Double(anchoPunto)!
+        let largoPunto = convertirComa(text: longitudTextfield.text!)
+        let largo = Double(largoPunto)!
+       
+        let resultado: Double =  (puntosLuz! * lumenes!) / (ancho * largo)
+        print(resultado)
         return resultado
-    }
-    
-    
-    
-    func calcularGrados(apertura: Double) -> Double{
-        return apertura / 2
-        
-    }
-    
-    func calcularRadianes(grados: (Double)) -> Double {
-        var resultado: Double
-        let calculo = 2 * Double.pi
-        let calculo2 = calculo / 360.0
-        resultado = calculo2 * grados
-        
-        return resultado
-    }
-    
-
-    
-    func calcularRadio ( altura: Double,radinanes: Double) -> Double {
-        
-        let distanciaSueloComa = convertirComa(text: distanciaSueloTextfield.text!)
-        let resultado = tan(radinanes) * (Double(altura) - Double(distanciaSueloComa)!)
-        
-       // print("Altura suelo:\(Double((protocoloARecibir?.distanciaSuelo)!))")
-        
-        return resultado
-        
     }
     
     func Kfactor() ->Double {
-        
+
         let anchoPunto = convertirComa(text: anchuraTextField.text!)
         let ancho = Double(anchoPunto)!
         let largoPunto = convertirComa(text: longitudTextfield.text!)
@@ -217,13 +168,12 @@ class CalcularViewController: UIViewController,UITextFieldDelegate {
         let altura = Double(alturaPunto)!
         let alturaSueloPunto = convertirComa(text: String(describing: (protocoloARecibir?.distanciaSuelo)!))
         let alturaSuelo = Double(alturaSueloPunto)!
-        
         let resultado = ((ancho * largo) / ((altura - alturaSuelo) * (largo + ancho)))
         return resultado
     }
+
     
     func comprobarCamposVacios() -> Bool {
-        
         
         if self.anchuraTextField.text?.isEmpty == true {
             
@@ -271,7 +221,7 @@ class CalcularViewController: UIViewController,UITextFieldDelegate {
         }
         if self.longitudTextfield.text?.isEmpty == true {
             
- 
+            
             //Esto es para crear alertas
             //Crear una alerta
             //UIAlertController
@@ -316,7 +266,7 @@ class CalcularViewController: UIViewController,UITextFieldDelegate {
         
         if self.alturaTextfield.text?.isEmpty == true {
             
-
+            
             //Esto es para crear alertas
             //Crear una alerta
             //UIAlertController
@@ -359,15 +309,14 @@ class CalcularViewController: UIViewController,UITextFieldDelegate {
             return true
         }
         
-        
-        if self.lumenTextfield.text?.isEmpty == true {
+        if self.punLuzTextfield.text?.isEmpty == true {
             
-
+            
             //Esto es para crear alertas
             //Crear una alerta
             //UIAlertController
             
-            let alerta = UIAlertController(title: "Aviso", message: "Por favor rellena el campo Lumenes", preferredStyle: UIAlertControllerStyle.alert)
+            let alerta = UIAlertController(title: "Aviso", message: "Por favor rellena el campo Puntos de Luz", preferredStyle: UIAlertControllerStyle.alert)
             //Creamos  Acciones (los botones)
             let accionCancelar = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
             alerta.addAction(accionCancelar)
@@ -375,28 +324,14 @@ class CalcularViewController: UIViewController,UITextFieldDelegate {
             return true
         }
         
-        if self.lumenTextfield.text == "0" {
+        if self.punLuzTextfield.text == "0" {
             
             
             //Esto es para crear alertas
             //Crear una alerta
             //UIAlertController
             
-            let alerta = UIAlertController(title: "Aviso", message: "El valor introducido en el campo Lumenes tiene que se mayor que 0", preferredStyle: UIAlertControllerStyle.alert)
-            //Creamos  Acciones (los botones)
-            let accionCancelar = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
-            alerta.addAction(accionCancelar)
-            present(alerta, animated: true)
-            return true
-        }
-        if self.lumenTextfield.text?.first == "," {
-            
-            
-            //Esto es para crear alertas
-            //Crear una alerta
-            //UIAlertController
-            
-            let alerta = UIAlertController(title: "Aviso", message: "El valor introducido en el campo Lumenes no es correcto", preferredStyle: UIAlertControllerStyle.alert)
+            let alerta = UIAlertController(title: "Aviso", message: "El valor introducido en el campo Puntos de Luz tiene que se mayor que 0", preferredStyle: UIAlertControllerStyle.alert)
             //Creamos  Acciones (los botones)
             let accionCancelar = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
             alerta.addAction(accionCancelar)
@@ -405,13 +340,13 @@ class CalcularViewController: UIViewController,UITextFieldDelegate {
         }
         
         if self.distanciaSueloTextfield.text?.isEmpty == true {
-        
-
+            
+            
             //Esto es para crear alertas
             //Crear una alerta
             //UIAlertController
             
-            let alerta = UIAlertController(title: "Aviso", message: "Por favor rellena el campo Distancia al suelo", preferredStyle: UIAlertControllerStyle.alert)
+            let alerta = UIAlertController(title: "Aviso", message: "Por favor rellena el campo Distancia al Suelo", preferredStyle: UIAlertControllerStyle.alert)
             //Creamos  Acciones (los botones)
             let accionCancelar = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
             alerta.addAction(accionCancelar)
@@ -462,7 +397,7 @@ class CalcularViewController: UIViewController,UITextFieldDelegate {
                 let countdots = textField.text!.components(separatedBy:",").count - 1
                 if countdots == 0 {
                     return true
-                    }else{
+                }else{
                     if countdots > 0 && string == "," {
                         return false
                     } else {
@@ -478,8 +413,8 @@ class CalcularViewController: UIViewController,UITextFieldDelegate {
     //Convertir comas en puntos y viceversa
     
     func convertirComa (text : String) -> String {
-        let result = text.replacingOccurrences(of: ",", with: ".")
-        print(result)
+    let result = text.replacingOccurrences(of: ",", with: ".")
+     print(result)
         return result
     }
     
@@ -541,7 +476,7 @@ class CalcularViewController: UIViewController,UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self)
         super.viewWillDisappear(animated)
     }
- 
+    
     
     // MARK: - TAPGestureRecognizer
     
@@ -551,37 +486,38 @@ class CalcularViewController: UIViewController,UITextFieldDelegate {
          que se encuentre realizando nuestro controller*/
         self.view.endEditing(true)
     }
-   
+    
     // MARK: - Navigation
     
     // segue ResultadoViewController -> CalcularViewController
     @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? ResultadoViewController {
+        if let sourceViewController = sender.source as? ResultadoLuxesViewController {
             alturaCorregidaRecibida = sourceViewController.alturaCorregidaParaEnviar
             areaCorregidaRecibida = sourceViewController.areaCorregidaParaEnviar
         }
     }
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "resultadoSegue" {
+        if segue.identifier == "resultadoLuxesSegue" {
             
-                let luxesAEnviar = luxes
-                let luminariasAEnviar = numeroLuminarias
-                let normativaAEnviar = protocoloARecibir
-                let luminariaAEnviar = luminariaARecibir
-                let destinationController = segue.destination as! ResultadoViewController
-                destinationController.luxesARecibir = luxesAEnviar
-                destinationController.luminariasARecibir = luminariasAEnviar
-                destinationController.normativaARecibir = normativaAEnviar
-                destinationController.luminariaARecibir = luminariaAEnviar
+            let luxesAEnviar = luxes
+            let luminariasAEnviar = puntosLuz
+            let normativaAEnviar = protocoloARecibir
+            let luminariaAEnviar = luminariaARecibir
+            let destinationController = segue.destination as! ResultadoLuxesViewController
+            destinationController.luxesARecibir = luxesAEnviar
+            destinationController.luminariasARecibir = luminariasAEnviar
+            destinationController.normativaARecibir = normativaAEnviar
+            destinationController.luminariaARecibir = luminariaAEnviar
             
         }
         
     }
     
     
-
+    
 }
+

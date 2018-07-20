@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB035ACA20E53DF7001E1831 /* ConnectionCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB035AC920E53DF7001E1831 /* ConnectionCheck.swift */; };
 		AB108DA0204B05050056AF24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB108D9F204B05050056AF24 /* AppDelegate.swift */; };
 		AB108DA2204B05050056AF24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB108DA1204B05050056AF24 /* ViewController.swift */; };
 		AB108DA5204B05050056AF24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB108DA3204B05050056AF24 /* Main.storyboard */; };
@@ -18,12 +19,17 @@
 		AB108DB8204B25D50056AF24 /* CalcularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB108DB7204B25D50056AF24 /* CalcularViewController.swift */; };
 		AB108DBA204B27360056AF24 /* ResultadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB108DB9204B27360056AF24 /* ResultadoViewController.swift */; };
 		AB12760C20A326EE0013A1F1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12760B20A326EE0013A1F1 /* SwiftyJSON.swift */; };
+		AB14FDF220ED2C2F00FB1373 /* ResultadoLuxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB14FDF120ED2C2F00FB1373 /* ResultadoLuxesViewController.swift */; };
+		AB1C6B3620ECE8D400A2D0EB /* EleccionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C6B3520ECE8D400A2D0EB /* EleccionViewController.swift */; };
+		AB1C6B3820ECF3DF00A2D0EB /* CalcularLuxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C6B3720ECF3DF00A2D0EB /* CalcularLuxesViewController.swift */; };
 		AB37D9EE209A1BEE002FCD20 /* Luminaria.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB37D9ED209A1BEE002FCD20 /* Luminaria.swift */; };
 		AB37D9F5209A1E4E002FCD20 /* LuminariaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB37D9F4209A1E4E002FCD20 /* LuminariaCollectionViewController.swift */; };
 		AB37D9F7209A1E72002FCD20 /* LuminariaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB37D9F6209A1E72002FCD20 /* LuminariaCollectionViewCell.swift */; };
+		ABF2588E20C1BCEF0074C011 /* SearchCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF2588D20C1BCEF0074C011 /* SearchCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB035AC920E53DF7001E1831 /* ConnectionCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionCheck.swift; sourceTree = "<group>"; };
 		AB108D9C204B05050056AF24 /* PriluxCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PriluxCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB108D9F204B05050056AF24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB108DA1204B05050056AF24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,9 +43,17 @@
 		AB108DB7204B25D50056AF24 /* CalcularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcularViewController.swift; sourceTree = "<group>"; };
 		AB108DB9204B27360056AF24 /* ResultadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadoViewController.swift; sourceTree = "<group>"; };
 		AB12760B20A326EE0013A1F1 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		AB14FDF120ED2C2F00FB1373 /* ResultadoLuxesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadoLuxesViewController.swift; sourceTree = "<group>"; };
+		AB1C6B3520ECE8D400A2D0EB /* EleccionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EleccionViewController.swift; sourceTree = "<group>"; };
+		AB1C6B3720ECF3DF00A2D0EB /* CalcularLuxesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcularLuxesViewController.swift; sourceTree = "<group>"; };
 		AB37D9ED209A1BEE002FCD20 /* Luminaria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Luminaria.swift; sourceTree = "<group>"; };
 		AB37D9F4209A1E4E002FCD20 /* LuminariaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuminariaCollectionViewController.swift; sourceTree = "<group>"; };
 		AB37D9F6209A1E72002FCD20 /* LuminariaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuminariaCollectionViewCell.swift; sourceTree = "<group>"; };
+		ABA09B3C21010E4400767BE3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		ABA09B3D21010E4400767BE3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		ABA09B3E21010E8700767BE3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		ABA09B3F21010E8800767BE3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		ABF2588D20C1BCEF0074C011 /* SearchCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +86,11 @@
 		AB108D9E204B05050056AF24 /* PriluxCalc */ = {
 			isa = PBXGroup;
 			children = (
+				AB4A520320EA90A1008CDE59 /* Transiciones */,
 				AB12760D20A326F70013A1F1 /* Librerias_Externas */,
 				AB37D9EF209A1C9C002FCD20 /* Luminaria */,
 				AB37D9F0209A1CAD002FCD20 /* Normativa */,
+				AB1C6B3420ECE8A600A2D0EB /* Eleccion */,
 				AB37D9F2209A1DBF002FCD20 /* Calculos */,
 				AB37D9F3209A1E0C002FCD20 /* Resultado */,
 				AB108D9F204B05050056AF24 /* AppDelegate.swift */,
@@ -91,8 +107,18 @@
 			isa = PBXGroup;
 			children = (
 				AB12760B20A326EE0013A1F1 /* SwiftyJSON.swift */,
+				ABF2588D20C1BCEF0074C011 /* SearchCollectionReusableView.swift */,
+				AB035AC920E53DF7001E1831 /* ConnectionCheck.swift */,
 			);
 			path = Librerias_Externas;
+			sourceTree = "<group>";
+		};
+		AB1C6B3420ECE8A600A2D0EB /* Eleccion */ = {
+			isa = PBXGroup;
+			children = (
+				AB1C6B3520ECE8D400A2D0EB /* EleccionViewController.swift */,
+			);
+			path = Eleccion;
 			sourceTree = "<group>";
 		};
 		AB37D9EF209A1C9C002FCD20 /* Luminaria */ = {
@@ -119,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				AB108DB7204B25D50056AF24 /* CalcularViewController.swift */,
+				AB1C6B3720ECF3DF00A2D0EB /* CalcularLuxesViewController.swift */,
 			);
 			path = Calculos;
 			sourceTree = "<group>";
@@ -127,8 +154,16 @@
 			isa = PBXGroup;
 			children = (
 				AB108DB9204B27360056AF24 /* ResultadoViewController.swift */,
+				AB14FDF120ED2C2F00FB1373 /* ResultadoLuxesViewController.swift */,
 			);
 			path = Resultado;
+			sourceTree = "<group>";
+		};
+		AB4A520320EA90A1008CDE59 /* Transiciones */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Transiciones;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,7 +207,6 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = AB108D93204B05050056AF24;
@@ -203,15 +237,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB14FDF220ED2C2F00FB1373 /* ResultadoLuxesViewController.swift in Sources */,
 				AB108DA2204B05050056AF24 /* ViewController.swift in Sources */,
 				AB108DA0204B05050056AF24 /* AppDelegate.swift in Sources */,
 				AB108DBA204B27360056AF24 /* ResultadoViewController.swift in Sources */,
 				AB12760C20A326EE0013A1F1 /* SwiftyJSON.swift in Sources */,
 				AB108DB4204B09210056AF24 /* CeldasProtocoloCollectionViewCell.swift in Sources */,
 				AB37D9EE209A1BEE002FCD20 /* Luminaria.swift in Sources */,
+				AB1C6B3820ECF3DF00A2D0EB /* CalcularLuxesViewController.swift in Sources */,
 				AB108DB8204B25D50056AF24 /* CalcularViewController.swift in Sources */,
 				AB108DB6204B0E950056AF24 /* Protocolo.swift in Sources */,
+				AB035ACA20E53DF7001E1831 /* ConnectionCheck.swift in Sources */,
 				AB37D9F7209A1E72002FCD20 /* LuminariaCollectionViewCell.swift in Sources */,
+				AB1C6B3620ECE8D400A2D0EB /* EleccionViewController.swift in Sources */,
+				ABF2588E20C1BCEF0074C011 /* SearchCollectionReusableView.swift in Sources */,
 				AB108DB2204B08E60056AF24 /* ProtocolosCollectionViewController.swift in Sources */,
 				AB37D9F5209A1E4E002FCD20 /* LuminariaCollectionViewController.swift in Sources */,
 			);
@@ -224,6 +263,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				AB108DA4204B05050056AF24 /* Base */,
+				ABA09B3C21010E4400767BE3 /* es */,
+				ABA09B3E21010E8700767BE3 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -232,6 +273,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				AB108DA9204B05050056AF24 /* Base */,
+				ABA09B3D21010E4400767BE3 /* es */,
+				ABA09B3F21010E8800767BE3 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -243,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -300,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -353,6 +398,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6YDR59UHKP;
 				INFOPLIST_FILE = PriluxCalc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = prilux.com.PriluxCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -368,6 +414,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6YDR59UHKP;
 				INFOPLIST_FILE = PriluxCalc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = prilux.com.PriluxCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
